@@ -39,7 +39,7 @@ public class ArrayStorage {
     }
 
     void delete(String uuid) {
-   if (uuid !=null)
+      if (uuid !=null)
         for (int i = 0; i < _size ; i++) {
             if(uuid.equals(storage[i].uuid)) {
                 for (int j = i; j < _size; j++) {
