@@ -16,24 +16,19 @@ public class ArrayStorage {
 
     void save(Resume r) {
         if (r != null) {
-            storage[size] = new Resume();
-            storage[size].uuid = r.uuid;
+            storage[size] = r;
             size++;
         }
     }
 
     Resume get(String uuid) {
-        // Resume emptyR = null;
         if (uuid != null) {
             for (int i = 0; i < size; i++) {
                 if (uuid.equals(storage[i].uuid)) {
                     return storage[i];
                 }
             }
-            //    emptyR = new Resume();
-            //    emptyR.uuid = uuid.concat(" is absent!");
         }
-        //return emptyR; //or
         return null;
     }
 
